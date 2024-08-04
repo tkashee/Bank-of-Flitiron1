@@ -1,116 +1,52 @@
-Bank of Flatiron React Application
+## Bank of Flatiron React Application
 Overview
-Welcome to the Bank of Flatiron React Application! This project involves building a React application that displays recent bank transactions, allows adding new transactions, and filtering them based on search terms. This project tests your ability to follow instructions and implement features using React and JavaScript.
+Build a React application to manage bank transactions, implementing features such as viewing, adding, and filtering transactions.
 
-Instructions
-Follow these steps to set up and implement the application:
+# Instructions
+Setup:
 
-Setup: Create a new React application using Create React App. Copy the provided db.json data into your own db.json file at the root of your project.
+Create a React app using Create React App.
+Copy db.json data into your project's db.json file.
+Run Servers:
 
-Run JSON Server: Start the JSON Server before running the React server. Both servers run on port 3000 by default, so starting JSON Server first allows React to find an alternate port.
-
+## Start JSON Server before the React server.
 bash
 Copy code
 json-server --watch db.json
 npm start
 Core Deliverables
-As a user, you should be able to:
-
-View Transactions: See a table of transactions.
-Add Transactions: Fill out and submit a form to add a new transaction, which updates the table and persists the data via the backend API.
-Filter Transactions: Filter transactions using a search bar, displaying only those with descriptions matching the search term.
+View Transactions: Display a table of transactions.
+Add Transactions: Form submission to add and persist new transactions.
+Filter Transactions: Filter transactions using a search bar.
 Advanced Deliverables
-If you have extra time or after completing the core deliverables, you can implement:
-
-Sort Transactions: Sort transactions alphabetically by category or description.
-Delete Transactions: Delete a transaction, removing it from the table and the backend.
+Sort Transactions: Sort by category or description.
+Delete Transactions: Remove transactions from the table and backend.
 Endpoints
 GET /transactions
-
-Example Response:
-json
-Copy code
-[
-  {
-    "id": 1,
-    "date": "2019-12-01",
-    "description": "Paycheck from Bob's Burgers",
-    "category": "Income",
-    "amount": 1000
-  },
-  {
-    "id": 2,
-    "date": "2019-12-01",
-    "description": "South by Southwest Quinoa Bowl at Fresh & Co",
-    "category": "Food",
-    "amount": -10.55
-  }
-]
 POST /transactions
-
-Required Headers:
-json
-Copy code
-{
-  "Content-Type": "application/json"
-}
-Request Object:
-json
-Copy code
-{
-  "date": "string",
-  "description": "string",
-  "category": "string",
-  "amount": number
-}
-Example Response:
-json
-Copy code
-{
-  "id": 1,
-  "date": "2019-12-01",
-  "description": "Paycheck from Bob's Burgers",
-  "category": "Income",
-  "amount": 1000
-}
 DELETE /transactions/
+Implementation Steps
+Setup Application:
 
-Example Response:
-json
-Copy code
-{}
-Implementation
-Setting Up the Application:
-
-Create a new React application.
-Set up JSON Server with the provided db.json data.
-Ensure both servers are running on different ports.
+Create a new React app.
+Set up JSON Server with db.json.
 Components:
 
-Create components for displaying the transactions table, the form for adding new transactions, and the search bar.
-Use state and props effectively to manage and pass data between components.
+Create components for the transactions table, form, and search bar.
+Use state and props to manage data.
 Data Fetching:
 
-Fetch transactions data from the backend using fetch or axios.
-Post new transactions to the backend to persist the data.
+Fetch and post data using fetch or axios.
 Event Handling:
 
-Handle form submissions to add new transactions.
-Implement search functionality to filter transactions based on the search term.
+Handle form submissions.
+Implement search functionality.
 Optional Enhancements:
 
-Add sorting functionality for transactions.
-Implement delete functionality to remove transactions.
+Add sorting and delete functionalities.
 Deployment
-Deploy both the frontend and the db.json backend. Change the URL for fetching data to the deployed backend before submitting your project. Ensure your deployed application is functional and accessible.
+Deploy both frontend and backend, and update the fetch URL to the deployed backend before submission.
 
-Readme
-Include a README file with:
-
-Overview of the project
-Instructions for setting up and running the application
-Description of core and advanced features
-Information on how to deploy the application
 Example README Content
 markdown
 Copy code
@@ -118,35 +54,34 @@ Copy code
 
 ## Overview
 
-This project is a React application for managing and viewing bank transactions. Users can view, add, filter, sort, and delete transactions.
+A React app to manage bank transactions.
 
 ## Instructions
 
 ### Setup
 
 1. Clone the repository.
-2. Run `npm install` to install dependencies.
-3. Start the JSON Server with `json-server --watch db.json`.
-4. Start the React application with `npm start`.
+2. Run `npm install`.
+3. Start JSON Server: `json-server --watch db.json`.
+4. Start React app: `npm start`.
 
 ### Core Features
 
-- View a table of transactions.
-- Add new transactions via a form.
-- Filter transactions using a search bar.
+- View transactions.
+- Add new transactions.
+- Filter transactions.
 
 ### Advanced Features
 
-- Sort transactions by category or description.
-- Delete transactions from the table and backend.
+- Sort transactions.
+- Delete transactions.
 
 ### Deployment
 
-Deploy the frontend and backend. Update the URL for fetching data to the deployed backend URL.
+Deploy both frontend and backend, and update fetch URL.
 
 ## Endpoints
 
 - **GET /transactions**
 - **POST /transactions**
 - **DELETE /transactions/:id**
-
